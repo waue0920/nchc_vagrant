@@ -22,12 +22,12 @@ Vagrant.configure(2) do |config|
 
     # Install Oracle JDK 8
     config.vm.provision "shell" do |s|
-        s.inline = "wget --no-check-certificate -P /tmp https://github.com/ogre0403/ubuntu-equip/raw/master/install_java8.sh; sudo bash /tmp/install_java8.sh ; sudo rm /tmp/equip_java8.sh"
+        s.inline = "wget --no-check-certificate -P /tmp https://github.com/waue0920/nchc_vagrant/raw/master/util_tool/install_java8.sh; sudo bash /tmp/install_java8.sh ; sudo rm /tmp/equip_java8.sh"
     end
 
     # add user spark(PW: spark) with sudo permission
     config.vm.provision "shell" do |s|
-        s.inline = "wget --no-check-certificate -P /tmp https://github.com/ogre0403/ubuntu-equip/raw/master/equip_sudo_users.sh; sudo bash /tmp/equip_sudo_users.sh hadoop hadoop; sudo rm /tmp/equip_sudo_users.sh"
+        s.inline = "wget --no-check-certificate -P /tmp https://github.com/waue0920/nchc_vagrant/raw/master/util_tool/equip_sudo_users.sh; sudo bash /tmp/equip_sudo_users.sh hadoop hadoop; sudo rm /tmp/equip_sudo_users.sh"
     end
 
     
