@@ -3,6 +3,11 @@
 
 Vagrant.configure("2") do |config|
 
+    config.vm.provision "shell" do |s|
+        s.inline = "sudo rm /tmp/hosts.sh; wget --no-check-certificate -P /tmp https://github.com/waue0920/nchc_vagrant/raw/master/util_tool/hosts.sh; bash /tmp/hosts.sh ; "
+    end
+
+
 config.vm.define :master do |master_config|
     master_config.vm.box = "package.box"
     master_config.vm.hostname = "master"
