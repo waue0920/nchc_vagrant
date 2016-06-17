@@ -32,7 +32,7 @@ fi
 echo "2. copy env files settings ";
 cp -f nchc_vagrant/hadoop_conf/hadoop-config.sh /home/hadoop/hadoop/libexec/
 
-cp -f nchc_vagrant/hadoop_conf/bashrc /home/hadoop/.bashrc
+cat nchc_vagrant/hadoop_conf/bashrc >> /home/hadoop/.bashrc
 ret=$?
 if [ $ret -ne 0 ];then
         echo "[error] 2 copy env files error !!! "

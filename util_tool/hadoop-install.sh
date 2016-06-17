@@ -31,7 +31,8 @@ tar -zxf /opt/hadoop-2.6.0-cdh5.5.1.tar.gz
 
 mv hadoop-2.6.0-cdh5.5.1 hadoop
 
-cp -rf /opt/nchc_vagrant ./
+#cp -rf /opt/nchc_vagrant ./
+git clone https://github.com/waue0920/nchc_vagrant.git
 
 sed -i 's/java-7-openjdk-amd64/java-8-oracle/g' ./nchc_vagrant/hadoop_conf/hadoop-env.sh
 
