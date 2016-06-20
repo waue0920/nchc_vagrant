@@ -46,7 +46,7 @@ if [ $ret -ne 0 ];then
         exit 1 ;
 fi
 
-source .bashrc
+
 
 
 #scp -r /home/hadoop/hadoop slave:/home/hadoop
@@ -58,9 +58,10 @@ if [ $ret -ne 0 ];then
         echo "[ERROR4] sync data to slave error ! stopping. "
         exit 1 ;
 fi
-
 rm -rf ./hadoop.tar.gz
 ssh slave "rm -rf ./hadoop.tar.gz"
+
+source /home/hadoop/.bashrc
 
 hadoop namenode -format
 
