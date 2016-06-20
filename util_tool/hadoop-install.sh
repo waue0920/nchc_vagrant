@@ -47,8 +47,6 @@ if [ $ret -ne 0 ];then
 fi
 
 
-
-
 #scp -r /home/hadoop/hadoop slave:/home/hadoop
 tar -zcf ./hadoop.tar.gz ./hadoop
 scp ./hadoop.tar.gz slave:~/
@@ -61,7 +59,8 @@ fi
 rm -rf ./hadoop.tar.gz
 ssh slave "rm -rf ./hadoop.tar.gz"
 
-source /home/hadoop/.bashrc
+#source /home/hadoop/.bashrc
+source ./nchc_vagrant/hadoop_conf/bashrc
 
 hadoop namenode -format
 
